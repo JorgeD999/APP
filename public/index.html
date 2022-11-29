@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mediqboy</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/libs/plugins/mdtoast.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+    <link rel="shortcut icon" type="image/ico" href="img/LogoMini.png"/>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Android -->
+    <meta name="theme-color" content="#3498db">
+
+    <!-- IOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-152x152.png">
+
+    <!-- iPhone X (1125px x 2436px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="img/icons-ios/apple-launch-1125x2436.png">
+    <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="img/icons-ios/apple-launch-750x1334.png">
+    <!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="img/icons-ios/apple-launch-1242x2208.png">
+    <!-- iPhone 5 (640px x 1136px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="img/icons-ios/apple-launch-640x1136.png">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="apple-mobile-web-app-title" content="Twittor!">
+
+</head>
+<body>
+        <!-- Titulo -->
+        <span class="first"> 
+            <span id="salir-btn" class="fa fa-sign-out-alt out oculto animated fadeIn"></span>
+            <span id="titulo">Mediqboy</span>
+             <!-- Botón de notificaciones -->
+             <button title="Notificaciones" class="oculto notificaciones btn-noti-activadas"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+              </svg></button>
+            <button title="Notificaciones" class="oculto notificaciones btn-noti-desactivadas"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bell-slash" viewBox="0 0 16 16">
+                <path d="M5.164 14H15c-.299-.199-.557-.553-.78-1-.9-1.8-1.22-5.12-1.22-6 0-.264-.02-.523-.06-.776l-.938.938c.02.708.157 2.154.457 3.58.161.767.377 1.566.663 2.258H6.164l-1 1zm5.581-9.91a3.986 3.986 0 0 0-1.948-1.01L8 2.917l-.797.161A4.002 4.002 0 0 0 4 7c0 .628-.134 2.197-.459 3.742-.05.238-.105.479-.166.718l-1.653 1.653c.02-.037.04-.074.059-.113C2.679 11.2 3 7.88 3 7c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0c.942.19 1.788.645 2.457 1.284l-.707.707zM10 15a2 2 0 1 1-4 0h4zm-9.375.625a.53.53 0 0 0 .75.75l14.75-14.75a.53.53 0 0 0-.75-.75L.625 15.625z"/>
+              </svg></button>
+            <!-- Fin de boton de notificaciones -->
+
+        </span>
+        <!-- Fin Titulo -->
+
+        <!-- Modal -->
+        <div id="modal" class="oculto">
+            <!-- <img id="modal-avatar" src="img/avatars/spiderman.jpg"> -->
+
+            <span class="first"> 
+                <span id="titulo-modal">Nuevo mensaje</span>
+                <span id="cancel-btn" class="fa fa-times"></span>
+            </span>
+            
+
+            <div class="nuevo-mensaje">
+                <textarea id="txtMensaje" placeholder="Nuevo mensaje..." rows="5"></textarea>
+
+                <!-- <div class="modal-mapa oculto">
+                    <iframe
+                        width="100%"
+                        height="250"
+                        frameborder="0"
+                        src="https://www.google.com/maps/embed/v1/view?key=AIzaSyA-HXVa2jtkGfKtIJwisxgC46RaWqC1xuI&center=14.027334, -87.220878&zoom=17" allowfullscreen>
+                        </iframe>
+                </div > -->
+                <div class="camara-contenedor fadeIn fast oculto" align="center">
+                    <video id="player" autoplay style="height: 300px;"></video>
+
+                    <button id="tomar-foto-btn">
+                        <i class="fa fa-camera"></i>
+                        Tomar Foto
+                    </button>
+                </div>
+
+            </div>
+
+            
+            <!-- boton de enviar -->
+
+            <div id="post-btn" class="fab">
+                <i class="fa fa-paper-plane"></i>
+            </div>
+
+            <div id="location-btn" class="fab-marker">
+                <i class="fa fa-map-marker-alt"></i>
+            </div>
+
+            <div id="photo-btn" class="fab-photo">
+                <i class="fa fa-camera"></i>
+            </div>
+
+        </div>
+        <!-- Fin Modal -->
+
+
+        <!-- Seleccion de personaje -->
+        <div id="seleccion" class="seleccion animated fadeIn fast" align="center" style="margin-top: 300px;">
+        
+            <div>
+                <span id="nuevo-btn">
+                    <img data-user="spiderman" src="img/lista.png" alt="spiderman" class="truck" style="background-color: #fff; padding: 5px;">
+                </span>
+            </div>
+
+            <div>
+                <img data-user="ironman" src="img/celulas.png" alt="ironman" class="seleccion-avatar" style="background-color: #fff; padding: 5px;">
+            </div>
+<!-- 
+            <div>
+                <img data-user="wolverine" src="img/avatars/wolverine.jpg" alt="wolverine" class="seleccion-avatar">
+            </div>
+
+            <div>
+                <img data-user="thor" src="img/avatars/thor.jpg" alt="thor" class="seleccion-avatar">
+            </div>
+
+            <div>
+                <img data-user="hulk" src="img/avatars/hulk.jpg" alt="hulk" class="seleccion-avatar">
+            </div> -->
+
+        </div>
+
+        <!-- FIN Seleccion de personaje -->
+
+        <!-- Lista de mensajes -->
+        <ul id="timeline" class="timeline oculto">
+            
+            <!-- Mensaje -->
+            <!-- <li class="animated fadeIn fast">
+                <div class="avatar">
+                    <img src="img/avatars/spiderman.jpg">
+                </div>
+                <div class="bubble-container">
+                    <div class="bubble">
+                        <h3>@spiderman</h3>
+                        <br/>
+                        La tía May, hizo unos panqueques en forma de ironman!
+                    </div>
+                    
+                    <div class="arrow"></div>
+                </div>
+            </li> -->
+            <!-- Fin del mensaje -->
+
+            <!-- Mapa message -->
+            <!-- <li class="animated fadeIn fast">
+                <div class="avatar">
+                    <img src="img/avatars/spiderman.jpg">
+                </div>
+                <div class="bubble-container">
+                    <div class="bubble">
+                        <iframe
+                            width="100%"
+                            height="250"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/view?key=AIzaSyA-HXVa2jtkGfKtIJwisxgC46RaWqC1xuI&center=14.027334, -87.220878&zoom=17" allowfullscreen>
+                            </iframe>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                </div>
+            </li>  -->
+            <!-- Fin del mensaje -->
+
+        </ul>
+        <!-- Fin Lista de mensajes -->
+
+
+      
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/libs/plugins/mdtoast.min.js"></script>
+        
+        <!-- Camara Class -->
+        <script src="js/camara-class.js"></script>
+        <script src="js/app.js"></script>
+    
+</body>
+</html>
